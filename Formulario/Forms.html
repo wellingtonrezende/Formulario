@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Completo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      margin-bottom: 20px;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+
+    .buttons input {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .buttons input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .buttons input[type="reset"] {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Formulário de Cadastro</h2>
+    <form action="#" method="post">
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+      <div class="radio-group">
+        <label>Gênero:</label>
+        <label><input type="radio" name="genero" value="masculino" required> Masculino</label>
+        <label><input type="radio" name="genero" value="feminino"> Feminino</label>
+        <label><input type="radio" name="genero" value="outro"> Outro</label>
+      </div>
+
+      <label for="nascimento">Data de nascimento:</label>
+      <input type="date" id="nascimento" name="nascimento">
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco">
+
+      <label for="estado">Estado:</label>
+      <select id="estado" name="estado">
+        <option value="">Selecione</option>
+        <option value="SP">São Paulo</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <!-- Adicione mais estados conforme necessário -->
+      </select>
+
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade">
+
+      <label for="interesse">Área de interesse:</label>
+      <select id="interesse" name="interesse">
+        <option value="">Selecione</option>
+        <option value="tecnologia">Tecnologia</option>
+        <option value="educacao">Educação</option>
+        <option value="saude">Saúde</option>
+        <option value="outros">Outros</option>
+      </select>
+
+      <label for="comentarios">Comentários:</label>
+      <textarea id="comentarios" name="comentarios" placeholder="Digite suas observações..."></textarea>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="termos" required> Aceito os termos e condições</label>
+      </div>
+
+      <div class="buttons">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
